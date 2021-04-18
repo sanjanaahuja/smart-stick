@@ -2,6 +2,8 @@ package com.example.smartstick;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,14 +27,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // extract the data from form
                 String email =  username.getText().toString();
-
+                String passwrd = password.getText().toString();
                 if(email.isEmpty()){
                     username.setError("Email is required");
                     return;
 
                 }
 
-                if(password.isEmpty()){
+                if(passwrd.isEmpty()){
                     username.setError("Password is required");
                     return;
 
