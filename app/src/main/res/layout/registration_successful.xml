@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <ImageView
+        android:id="@+id/checkmark_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/checkmarkyes"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="170dp"
+    />
+
+    <TextView
+        android:id="@+id/registeration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have Successfully Registered"
+        android:layout_below="@id/checkmark_logo"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registeration_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="130dp"
+        android:text="Go Back to Login"
+        />
+</RelativeLayout>

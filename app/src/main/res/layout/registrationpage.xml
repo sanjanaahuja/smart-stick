@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/registration_logo"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Registration Form"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/name_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registration_logo"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/username"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Enter Your Name"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/name_msg"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="100"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            />
+
+        <TextView
+            android:id="@+id/create_username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:drawableLeft="@drawable/username_icon"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Create Your Username"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+
+
+        <EditText
+            android:id="@+id/create_username"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/create_username_text"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="100"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/create_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_username"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Create Your Password"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/create_password"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/create_password_text"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="100"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+        <TextView
+            android:id="@+id/confirm_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_password"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Confirm Your Password"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/confirm_password_text"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="100"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/stick_id_text"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_below="@id/confirm_password"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="90dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical|center_horizontal"-->
+<!--            android:text="Enter Your Stick ID"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/stick_id"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="57dp"-->
+<!--            android:layout_below="@id/stick_id_text"-->
+<!--            android:layout_marginLeft="90dp"-->
+<!--            android:layout_weight="100"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Stick ID"-->
+<!--            android:inputType="text"-->
+<!--            />-->
+
+        <TextView
+            android:id="@+id/contact_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_password"
+            android:drawableLeft="@drawable/contact_icon"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Enter Your Contact Number"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/contact_number"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/contact_number_text"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="100"
+            android:ems="10"
+            android:hint="Contact Number"
+            android:inputType="text"
+            />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_number"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Sign Up" />
+
+    </RelativeLayout>
+</ScrollView>
+
+
