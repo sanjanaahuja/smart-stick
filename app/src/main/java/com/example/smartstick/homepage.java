@@ -24,7 +24,7 @@ public class homepage extends AppCompatActivity {
         Locate_person.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),LocatethepersonActivity.classgit));
+                startActivity(new Intent(getApplicationContext(),LocatethepersonActivity.class));
             }
         });
 
