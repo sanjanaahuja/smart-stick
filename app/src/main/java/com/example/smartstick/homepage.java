@@ -24,16 +24,15 @@ public class homepage extends AppCompatActivity {
         Locate_person.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(homepage.this,LocatethepersonActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),LocatethepersonActivity.classgit));
             }
+        });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent intent=new Intent(homepage.this,Findthestick.class);
-                startActivity(intent);
-
+                startActivity(new Intent(getApplicationContext(),Findthestick.class));
             }
-
-
         });
 
 
