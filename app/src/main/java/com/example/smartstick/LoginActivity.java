@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 if(passwrd.isEmpty()){
-                    username.setError("Password is Missing");
+                    password.setError("Password is Missing");
                     return;
 
                 }
