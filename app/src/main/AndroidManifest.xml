@@ -12,12 +12,11 @@
         <activity android:name=".Findthestick"></activity>
         <activity android:name=".LocatethepersonActivity" />
         <activity android:name=".homepage" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".RegistrationSuccessActivity"></activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
