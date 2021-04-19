@@ -1,15 +1,24 @@
 package com.example.smartstick;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText email_id,full_name,password,confpassword,contact_no;
     Button registerbtn;
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +31,7 @@ public class RegistrationActivity extends AppCompatActivity {
         confpassword = findViewById(R.id.confirm_password);
         contact_no = findViewById(R.id.contact_number);
         registerbtn = findViewById(R.id.signup_button);
+        fAuth = FirebaseAuth.getInstance();
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,8 +67,23 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
-                // data is validated now continue the registration process
-                
+                // data is validated now
+                String email = email_id.getText().toString().trim();
+                String passwrd = password.getText().toString();
+                fAuth.createUserWithEmailAndPassword(email,passwrd).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+                        startActivity(new Intent(getApplicationContext(),RegistrationSuccessActivity.class));
+                        finish();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(RegistrationActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
 
             }
         });

@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class homepage extends AppCompatActivity {
-    private Button Locate_person, button1;
+    private Button Locate_person, button1,logoutbtn;
 
 
 
@@ -19,6 +21,7 @@ public class homepage extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
         Locate_person=findViewById(R.id.Locate_person);
         button1=findViewById(R.id.button1);
+        logoutbtn=findViewById(R.id.Logout_button);
 
 
         Locate_person.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +35,15 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Findthestick.class));
+            }
+        });
+
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                finish();
             }
         });
 

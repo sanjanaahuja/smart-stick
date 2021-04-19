@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
                 //Data is filled now we will login the user
-                firebaseAuth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(username.getText().toString().trim(),password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         //Login is Successful
